@@ -8,8 +8,8 @@ emojiHand = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/1
 emojiText = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/274/scroll_1f4dc.png'
 
 
-with zipfile.ZipFile("./model_df.zip","r") as zip_ref:
-    zip_ref.extractall("nlpApp/app/")
+# with zipfile.ZipFile("./model_df.zip","r") as zip_ref:
+#     zip_ref.extractall("nlpApp/app/")
 
 @st.cache
 def loadModel(path):
@@ -38,7 +38,7 @@ def app():
         st.write('Isso pode demorar um pouco... Estamos escrevendo seu poema...')
         st.image(emojiHand, width=25)
 
-        model_df = loadModel('model_df.pkl')
+        model_df = loadModel('./model_df.pkl')
 
         num_sents = 2
         current_bigram = ('<s>', '<s>')
