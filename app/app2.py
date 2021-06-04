@@ -9,7 +9,7 @@ emojiText = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/1
 
 
 with zipfile.ZipFile("model_df.zip","r") as zip_ref:
-    zip_ref.extractall("/home/henrihv/Documentos/streamlitApps/nlpProject/")
+    zip_ref.extractall("app/")
 
 @st.cache
 def loadModel(path):
