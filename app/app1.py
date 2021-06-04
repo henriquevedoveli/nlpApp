@@ -5,6 +5,7 @@ from textblob import TextBlob
 emojiText = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/274/scroll_1f4dc.png'
 
 nltk.download('punkt')
+nltk.download('stopwords')
 
 def app():
     col1, col2 = st.beta_columns([6,2])
