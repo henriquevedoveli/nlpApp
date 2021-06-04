@@ -8,7 +8,7 @@ emojiHand = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/1
 emojiText = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/274/scroll_1f4dc.png'
 
 
-with zipfile.ZipFile("https://github.com/henriquevedoveli/nlpApp/blob/main/app/model_df.zip?raw=true","r") as zip_ref:
+with zipfile.ZipFile("./model.zip","r") as zip_ref:
     zip_ref.extractall("nlpApp/app/")
 
 @st.cache
